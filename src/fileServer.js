@@ -2,7 +2,9 @@ const fs = require('fs');
 const express = require('express');
 const app = express();
 const http = require('http').Server(app);
-const dataFolder = process.argv[2];
+const port = process.argv[2]
+const dataFolder = process.argv[3];
+const dataFile = process.argv[4];
 
 var listOfFiles = [];
 
@@ -14,12 +16,12 @@ app.get('/', function (req, res) {
   res.send(msgToBrowser);
 });
 
-http.listen(1337, function () {
-  console.log('Listening on localhost:1337');
+http.listen(port, function () {
+  console.log('Listening on localhost:' + port);
 });
 
 //Read file 
-fs.readFile(dataFolder+"\\testData", 'ascii', function(err,data){
+fs.readFile(dataFolder+"\\"+dataFile, 'ascii', function(err,data){
     console.log(data);
 });
 
