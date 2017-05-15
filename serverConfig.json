@@ -1,0 +1,10 @@
+{
+    "serverPort" : 2001,
+    "filePath" : "C:\\server\\hstFiles",
+    "requestFileLocation" : "C:\\server\\request.txt",
+    "hstServerAddress" : "192.168.0.100",
+    "hstServerPort" : 1001,
+    "statusFilePath" : "C:\\server\\testData",
+    "statusPort" : 3001,
+    "statusFileName" : "testData"
+}
